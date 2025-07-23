@@ -259,7 +259,7 @@ const Index = () => {
         {/* Additional Features Section */}
         <section className="py-20 border-t border-border mt-20">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
               Everything You Need to Excel
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
