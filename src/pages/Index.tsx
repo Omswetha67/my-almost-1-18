@@ -243,20 +243,13 @@ const Index = () => {
 
 
             {/* Call to Action */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <div className="flex justify-center pt-8">
               <Button 
                 size="lg" 
                 onClick={handleGetStarted}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-3 rounded-xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
               >
                 Get Started Free
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 rounded-xl transition-all duration-300 backdrop-blur-sm"
-              >
-                Learn More
               </Button>
             </div>
           </div>
