@@ -206,11 +206,11 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[70vh]">
-          {/* Left Side - Welcome Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
+        <div className="flex flex-col items-center justify-center min-h-[70vh] text-center">
+          {/* Welcome Content */}
+          <div className="space-y-8 max-w-4xl mx-auto">
             {/* Brand Logo */}
-            <div className="flex items-center justify-center lg:justify-start space-x-3 mb-8">
+            <div className="flex items-center justify-center space-x-3 mb-8">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-2xl animate-pulse">
                 <BookOpen className="w-7 h-7 text-primary-foreground" />
               </div>
@@ -234,43 +234,9 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Feature Highlights */}
-            <div className="grid grid-cols-2 gap-6 my-12">
-              <div className="text-center p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Target className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Skill Tracking</h3>
-                <p className="text-sm text-muted-foreground">Monitor and improve your technical and soft skills</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <BookOpen className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Project Portfolio</h3>
-                <p className="text-sm text-muted-foreground">Showcase your work and track project completion</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Certifications</h3>
-                <p className="text-sm text-muted-foreground">Manage and display your professional credentials</p>
-              </div>
-              
-              <div className="text-center p-6 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Progress Analytics</h3>
-                <p className="text-sm text-muted-foreground">Visualize your learning journey with detailed insights</p>
-              </div>
-            </div>
 
             {/* Call to Action */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-8 py-3 rounded-xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
@@ -287,42 +253,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Right Side - Professional Student Image */}
-          <div className="relative order-1 lg:order-2">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src={collegeStudentsImage} 
-                alt="College students collaborating and learning together" 
-                className="w-full h-[500px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-              
-              {/* Floating Stats Cards */}
-              <div className="absolute top-6 right-6 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-border">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                    <Users className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">10,000+</p>
-                    <p className="text-xs text-muted-foreground">Active Students</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="absolute bottom-6 left-6 bg-card/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-border">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                    <Award className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">50,000+</p>
-                    <p className="text-xs text-muted-foreground">Skills Tracked</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Additional Features Section */}
