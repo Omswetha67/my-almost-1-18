@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -9,9 +9,10 @@ import { useToast } from '@/hooks/use-toast';
 
 interface AuthModalsProps {
   onLoginSuccess: () => void;
+  triggerSignup?: boolean;
 }
 
-export const AuthModals = ({ onLoginSuccess }: AuthModalsProps) => {
+export const AuthModals = ({ onLoginSuccess, triggerSignup }: AuthModalsProps) => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSignupOpen, setIsSignupOpen] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -38,6 +39,13 @@ export const AuthModals = ({ onLoginSuccess }: AuthModalsProps) => {
 
   const [otpSent, setOtpSent] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Handle external trigger for signup
+  useEffect(() => {
+    if (triggerSignup) {
+      setIsSignupOpen(true);
+    }
+  }, [triggerSignup]);
 
   const validateLogin = () => {
     const newErrors: Record<string, string> = {};
